@@ -19,6 +19,15 @@ namespace StudentExercisesFive
             }
 
             exercises = repository.GetAllExercisesByLanguage("Javascript");
+
+            foreach (Exercise exercise in exercises)
+            {
+                Console.WriteLine($"{exercise.Exercise_Name}");
+            }
+
+            Exercise newExercise = new Exercise { Exercise_Name = "Welcome to Nashville", Language = "Javascript" };
+        
+            repository.AddExercise(newExercise);
         }
     }
 }
