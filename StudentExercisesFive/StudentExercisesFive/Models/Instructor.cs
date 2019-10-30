@@ -12,6 +12,11 @@ namespace StudentExercisesFive.Models
         public string Slack_Handle { get; set; }
         public string Specialty { get; set; }
         public int Cohort_Id { get; set; }
+        public Cohort cohort { get; set; }
+        public void AssignExercise (Student student, Exercise exercise)
+        {
+            student.ExerciseList.Add(exercise);
+        }
 
     }
 }

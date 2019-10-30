@@ -11,6 +11,6 @@ namespace StudentExercisesFive.Models
         public string Last_Name { get; set; }
         public string Slack_Handle { get; set; }
         public int Cohort_Id { get; set; }
-        public int Exercise_Id { get; set; }
+        public List<Exercise> ExerciseList = new List<Exercise>();
     }
 }
